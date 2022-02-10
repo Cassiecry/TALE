@@ -1,8 +1,14 @@
-amino_acid = ['A', 'R', 'N', 'D',  'C', 'E', 'Q', 'G', 'H', 'I', 'L', 'K', 'M', 'F', 'P', 'S', 'T', 'W', 'Y', 'V']
 import numpy as np
+import matplotlib.pyplot as plt
+
+# 一个存储着氨基酸名称的列表
+amino_acid = ['A', 'R', 'N', 'D',  'C', 'E', 'Q', 'G', 'H', 'I', 'L', 'K', 'M', 'F', 'P', 'S', 'T', 'W', 'Y', 'V']
+
+#编码氨基酸
 AA_indx={'pad': 0, 'A': 1, 'R':2, 'N':3, 'D':4,  'C':5, 'E':6, 'Q':7, 'G':8, 'H':9, 'I':10,\
  'L':11, 'K':12, 'M':13, 'F':14, 'P':15, 'S':16, 'T':17, 'W':18, 'Y':19, 'V':20, 'B':21, 'O':22, 'U':23, 'X':24, 'Z':25}
-    
+
+#判断氨基酸序列中是否有误    
 def Nature_seq(seq):
 
 	for i in seq:
@@ -12,8 +18,6 @@ def Nature_seq(seq):
 	return True
 
 
-
-import matplotlib.pyplot as plt
 def seq_length_plot(seq,name='seq_dis', maxlen=2000):
 
         length = []
